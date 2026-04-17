@@ -1,7 +1,12 @@
-const prompt = require('prompt-sync')()
+const prompt = require('prompt-sync')();
 
-let nota = parseFloat(prompt("Digite sua nota: "))
+    let repetir = true
 
-while(nota < 10 || nota > 0 ){
-     nota = parseFloat(prompt("Digite sua nota: "))
-}
+    while(repetir == true){
+        let pergunta = parseFloat(prompt(`Digite uma nota entre 0 a 10: `))
+        if(pergunta <=10){
+            console.log(`${pergunta}`)
+        }else{
+            repetir = false
+        }
+    }
